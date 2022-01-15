@@ -1,0 +1,105 @@
+body {
+  text-align: center;
+  background: #000000;
+}
+
+i {
+  position: absolute;
+  bottom: 600px;
+  height: 200px;
+  background: linear-gradient(transparent, #fff);
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  animation: animate 5s linear infinite;
+}
+
+i:nth-child(3n + 1) {
+  background: linear-gradient(transparent, #0ff);
+}
+
+i:nth-child(3n + 2) {
+  background: linear-gradient(transparent, #6f00ff);
+}
+
+i:nth-child(3n + 3) {
+  background: linear-gradient(transparent, #ff008c);
+}
+
+@keyframes animate {
+  0% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateY(calc(70vh + 200px));
+  }
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: "Franklin Gothic Medium";
+  letter-spacing: 3px;
+  color: #e0a5c6;
+}
+
+h1::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  top: 79px;
+
+  background: rgb(180, 134, 165);
+}
+
+.p {
+  background-repeat: no-repeat;
+}
+.l {
+  background-repeat: no-repeat;
+}
+.a {
+  background-repeat: no-repeat;
+}
+.y {
+  background-repeat: no-repeat;
+}
+
+.music__btn {
+  display: flex;
+  justify-content: space-evenly;
+}
+.drum {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 100px;
+  width: 102px;
+  height: 120px;
+  font-size: 2.3rem;
+  margin: 30px;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Franklin Gothic Medium";
+  outline: none;
+  border: 0;
+  margin: 3px;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 1000;
+
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border: 0.5px solid rgba(255, 255, 255, 0.5);
+  border-right: 0.5px solid rgba(255, 255, 255, 0.2);
+  border-left: 0.5px solid rgba(255, 255, 255, 0.2);
+}
+
+.pressed {
+  color: #255784;
+  background: #2196f3;
+
+  box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+}
